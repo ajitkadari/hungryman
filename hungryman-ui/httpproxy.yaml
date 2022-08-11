@@ -4,7 +4,7 @@ metadata:
   name: hungryman
 spec:
   virtualhost:
-    fqdn: hungryman.perfect300rock.com
+    fqdn: hungryman.tap.onepivotal.net
   routes:
     - services:
       - name: hungryman-api-gateway

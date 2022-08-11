@@ -13,7 +13,7 @@ spec:
       autoscaling.knative.dev/minScale: "1"
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-api-gateway

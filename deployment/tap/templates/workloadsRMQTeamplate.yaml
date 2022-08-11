@@ -14,7 +14,7 @@ spec:
       autoscaling.knative.dev/minScale: "1"   
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-api-gateway
@@ -45,7 +45,7 @@ spec:
       name: rmq_instance_name
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-search
@@ -73,7 +73,7 @@ spec:
       name: rmq_instance_name
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-search-proc
@@ -102,7 +102,7 @@ spec:
       name: rmq_instance_name
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-notify
@@ -134,7 +134,7 @@ spec:
       name: mysql_instance_name      
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-availability
@@ -155,7 +155,7 @@ spec:
       autoscaling.knative.dev/minScale: "1"   
   source:
     git:
-      url: https://github.com/gm2552/hungryman.git
+      url: https://github.com/ajitkadari/hungryman.git
       ref:
         branch: main
     subPath: hungryman-ui

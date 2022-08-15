@@ -5,7 +5,7 @@ The Hungryman TAP deployment options are enabled through a Tanzu application acc
 To install the accelerator into your TAP cluster, run the following command:
 
 ```
-tanzu acc create hungryman --git-repo https://github.com/gm2552/hungryman --git-branch main
+tanzu accelerator create hungryman --git-repository https://github.com/ajitkadari/hungryman --git-branch main
 ```
 
 ## Prerequisites

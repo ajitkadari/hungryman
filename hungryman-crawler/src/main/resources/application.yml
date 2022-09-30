@@ -1,28 +1,6 @@
-management:
-  health:
-    redis:
-      enabled: false
+server.port: 8082
 
-spring: 
-  cloud: 
-    stream:
-      function:
-        definition: processSearch
-      bindings: 
-        processSearch-in-0: 
-          destination: hungryman-search-criteria
-          group: hungryman-search-criteria-group
-          consumer: 
-            maxAttempts: 4
-            backOffInitialInterval: 15000
-            backOffMaxInterval: 60000 
-        processSearch-out-0: 
-          destination: hungryman-search-result
-
-server.port: 8083
-      
 hungryman:
-
   randomsearcher:
     establishments:
     - diningName: Bristol
@@ -109,13 +87,3 @@ hungryman:
       region: MO
       postalCode: 64112
       reservationURL: 'https://www.konagrill.com/reservations'
-      
----
-
-spring:
-  config.activate.on-profile: redis
-  
-management:
-  health:
-    redis:
-      enabled: true

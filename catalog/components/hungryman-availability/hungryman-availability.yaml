@@ -30,4 +30,4 @@ spec:
   owner: hungryman-team
   system: hungryman
   definition:
-    $text: http://hungryman.tap.onepivotal.net/api/availability/v3/api-docs/
+    $text: https://hungryman.tap.onepivotal.net/api/availability/v3/api-docs/

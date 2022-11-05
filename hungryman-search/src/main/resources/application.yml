@@ -5,17 +5,18 @@ server:
   # https://springdoc.org/faq.html#_how_can_i_deploy_springdoc_openapi_ui_behind_a_reverse_proxy
   forward-headers-strategy: framework
 
-hungryman:
+where-for-dinner:
   searchEvent:
     period: 120000
     
 spring: 
   sql.init.mode: ALWAYS 
+  sql.init.platform: h2
 
   cloud: 
     stream:
       poller:
-        fixed-delay: ${hungryman.searchEvent.period} 
+        fixed-delay: ${where-for-dinner.searchEvent.period} 
       function:
         definition: submittedSearches
       bindings: 
@@ -23,7 +24,7 @@ spring:
           destination: hungryman-search-criteria
 
 springdoc:
-  packages-to-scan: com.java.example.tanzu.hungryman.resources
+  packages-to-scan: com.java.example.tanzu.wherefordinner.resources
   show-spring-cloud-functions: false
           
 ---
@@ -31,7 +32,16 @@ springdoc:
 spring:
   config.activate.on-profile: mysql
   
+  sql.init.platform: mysql
+  
   r2dbc: 
     #Default properties to work with MariaDB driver
     properties.sslMode: TRUST  
     properties.tlsVersion: TLSv1.2
+    
+---
+
+spring:
+  config.activate.on-profile: postgres
+  
+  sql.init.platform: postgresql
